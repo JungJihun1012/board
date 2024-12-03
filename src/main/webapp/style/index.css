@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul, li {
+	list-style: none;
+}
+
+h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 5em;
+}
+input[type="button"] {
+	background-color: #F5F5F5;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+
+.content {
+	padding-top: 2rem;
+	width: 1140px;
+	display: flex;
+	justify-content: flex-end;
+	
+}
+
+.article {
+	width: 600px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+}
+.First_ul {
+	width: 400px;
+	line-height: 3rem;
+}
+.active {
+	border-bottom: 1px solid gray;
+	cursor: pointer;
+}
