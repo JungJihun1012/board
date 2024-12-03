@@ -3,6 +3,7 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import VO.Board;
@@ -32,10 +33,14 @@ public class BoardDAO {
 	}
 	
 	public ArrayList<Board> getBoard() {
-		ArrayList<Board> list = null;
+		ArrayList<Board> list = new ArrayList<Board>();
 		
 		try {
 			conn = DBConnection.getConnection();
+			if(conn == null) {
+				System.out.println("faill");
+				return list;
+			}
 			String sql = "select * from board order by seq";
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
@@ -49,7 +54,11 @@ public class BoardDAO {
 				
 				list.add(bo);
 			}
-		} catch (Exception e) {
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		} finally {

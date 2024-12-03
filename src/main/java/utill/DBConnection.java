@@ -11,7 +11,7 @@ public class DBConnection {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			conn = DriverManager.getConnection(url, "system", "1234");
+			conn = DriverManager.getConnection(url, "hr", "1234");
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

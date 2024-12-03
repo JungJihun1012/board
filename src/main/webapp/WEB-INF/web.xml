@@ -37,4 +37,34 @@
     <servlet-name>getBoardList</servlet-name>
     <url-pattern>/getBoardList</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddBoard</display-name>
+    <servlet-name>AddBoard</servlet-name>
+    <servlet-class>view.AddBoard</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBoard</servlet-name>
+    <url-pattern>/AddBoard</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddBoardCtrl</display-name>
+    <servlet-name>AddBoardCtrl</servlet-name>
+    <servlet-class>view.AddBoardCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBoardCtrl</servlet-name>
+    <url-pattern>/AddBoardCtrl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateBoardCtrl</display-name>
+    <servlet-name>UpdateBoardCtrl</servlet-name>
+    <servlet-class>view.UpdateBoardCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateBoardCtrl</servlet-name>
+    <url-pattern>/UpdateBoardCtrl</url-pattern>
+  </servlet-mapping>
 </web-app>
