@@ -28,6 +28,7 @@
 <body>
     <h2>글 수정</h2>
     <form action="UpdateBoardCtrl" method="post">
+    
         <input type="hidden" name="seq" value="<%= board.getSeq() %>"/>
         <label for="title">제목:</label>
         <input type="text" name="title" value="<%= board.getTitle() %>" required/><br/>
@@ -36,8 +37,18 @@
         <input type="submit" value="수정"/>
     </form>
     <form action="DeleteBoardCtrl" method="post">
-    	<input type="text" name="seq" value="<%=board.getSeq() %>" />
-    	<input type="submit" value="Delete"/>
+    	<input type="hidden" name="seq" value="<%=board.getSeq() %>" disabled="disabled" />
+    	<input type="submit" value="삭제"/>
     </form>
+    <script>
+    	function validate() {
+    		let seq = document.querySelector('input[name="seq"]').value;
+            if(!seq) {
+                alert("Invalid board ID");
+                return false;
+            }
+            return true;
+    	}
+    </script>
 </body>
 </html>

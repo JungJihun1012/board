@@ -67,4 +67,14 @@
     <servlet-name>UpdateBoardCtrl</servlet-name>
     <url-pattern>/UpdateBoardCtrl</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteBoardCtrl</display-name>
+    <servlet-name>DeleteBoardCtrl</servlet-name>
+    <servlet-class>view.DeleteBoardCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBoardCtrl</servlet-name>
+    <url-pattern>/DeleteBoardCtrl</url-pattern>
+  </servlet-mapping>
 </web-app>
