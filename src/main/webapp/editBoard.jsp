@@ -37,7 +37,8 @@
         <input type="submit" value="수정"/>
     </form>
     <form action="DeleteBoardCtrl" method="post">
-    	<input type="hidden" name="seq" value="<%=board.getSeq() %>" disabled="disabled" />
+    	<input type="hidden" name="seq" value="<%=board.getSeq() %>" />
+        <input type="text" name="seqDisplay" value="<%=board.getSeq()%>" readonly style="display: none;">
     	<input type="submit" value="삭제"/>
     </form>
     <script>
