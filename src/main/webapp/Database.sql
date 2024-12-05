@@ -27,9 +27,18 @@ VALUES (5, '다섯 번채 에제 게시물', '게시물 내용', '2024-11-30');
 INSERT INTO board(seq, title, content, regdate)
 VALUES (6, '여섯 번째 에제 게시물', '게시물 내용', '2024-05-23');
 
+drop table board;
+
 INSERT INTO board(seq, title, content, regdate)
 VALUES
 
 SELECT * FROM BOARD;
 
 SELECT * FROM board ORDER BY seq;
+
+delete from board where seq = 2;
+select * from board order by seq;
+
+delete from board where seq = 7 order by seq;
+
+delete from board;
