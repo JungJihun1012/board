@@ -16,7 +16,7 @@ public class AddBoardDAO {
 		int result = 0;
 		
 		try {
-			String sql  = "insert into board values((select nvl(max(seq), 1) + 1 seq from board)), ?, ?, ?";
+			String sql  = "insert into board values((select nvl(max(seq), 1) + 1 seq from board), ?, ?, ?) ";
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, rs.getInt("seq"));
 			result = stmt.executeUpdate();

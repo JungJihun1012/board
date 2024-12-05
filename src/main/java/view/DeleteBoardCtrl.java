@@ -50,8 +50,12 @@ public class DeleteBoardCtrl extends HttpServlet {
 			String sql = "DELETE FROM board WHERE seq = ?";
 			stmt = conn.prepareStatement(sql);
 			stmt.setInt(1, Integer.parseInt(request.getParameter("seq")));
-			stmt.executeUpdate();
-			response.sendRedirect("getBoardList.jsp");
+			int resultError = stmt.executeUpdate();
+			if(resultError > 0) {
+				response.sendRedirect("getBoardList.jsp");
+			} else {
+				response.sendRedirect("errorPage.jsp");
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
