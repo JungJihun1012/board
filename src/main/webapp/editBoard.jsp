@@ -59,7 +59,6 @@
             font-size: 16px;
         }
         input[type="submit"] {
-            background-color: #5cb85c;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -68,16 +67,23 @@
             font-size: 16px;
             transition: background-color 0.3s;
         }
-        input[type="submit"]:hover {
+        .edit-button {
+            background-color: #5cb85c;
+        }
+        .edit-button:hover {
             background-color: #4cae4c;
         }
         .button-container {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            position: relative;
         }
         .delete-button {
             background-color: #d9534f;
+            position: absolute;
+            right: 0;
+            top: -61.5px;
         }
         .delete-button:hover {
             background-color: #c9302c;
@@ -93,7 +99,7 @@
             <input type="text" name="title" value="<%= board.getTitle() %>" required/>
             <label for="content">내용:</label>
             <textarea name="content" required><%= board.getContent() %></textarea>
-		    <input type="submit" value="수정"/>
+		    <input type="submit" value="수정" class="edit-button"/>
         </form>
          <div class="button-container">
 		    <form action="DeleteBoardCtrl" method="post" style="display:inline;">
