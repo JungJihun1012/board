@@ -84,6 +84,7 @@
         <label for="content">내용:</label>
         <input type="text" name="content" value="<%=board.getContent()%>" readonly="readonly"/>
         <a href="editBoard.jsp?seq=<%=rs.getInt("seq")%>">수정하기</a>
+        <a href="getBoardList.jsp">목록으로</a>
     </div>
 </body>
 </html>
