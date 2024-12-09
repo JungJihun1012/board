@@ -117,7 +117,7 @@
 		%>
 		<tr>
 			<td><a href="index.jsp?seq=<%=rs.getInt("seq")%>"><%=rs.getInt("seq")%></a></td>
-    		<td><a href="editBoard.jsp?seq=<%=rs.getInt("seq")%>"><%=rs.getString("title")%></a></td>
+    		<td><a href="readBoard.jsp?seq=<%=rs.getInt("seq")%>"><%=rs.getString("title")%></a></td>
     		<td><%=rs.getString("content")%></td>
     		<td><%=rs.getDate("regdate") %></td>
     		<td><%=rs.getInt("cnt")%></td>
