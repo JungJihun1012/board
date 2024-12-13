@@ -1,6 +1,9 @@
 <%@page import="VO.Board"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+    	
+    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +48,7 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
-        input[type="submit"] {
+        input[type="submit"], a {
             background-color: #5cb85c;
             color: white;
             border: none;
@@ -54,8 +57,9 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s;
+            text-decoration: none;
         }
-        input[type="submit"]:hover {
+        input[type="submit"]:hover, a {
             background-color: #4cae4c;
         }
     </style>
@@ -77,14 +81,9 @@
                 </td>
             </tr>
             <tr>
-                <th>등록일자</th>
-                <td>
-                    <input name="regdate" type="datetime-local" required />
-                </td>
-            </tr>
-            <tr>
                 <td colspan="2" style="text-align: center;">
                     <input type="submit" value="등록" />
+                	<a href="index.jsp">돌아가기</a>
                 </td>
             </tr>
         </table>

@@ -19,7 +19,7 @@ INSERT INTO board(seq, title, content, regdate)
 VALUES (3, '세 번째 에제 게시물', '게시물 내용', '2024-10-12');
 
 INSERT INTO board(seq, title, content, regdate)
-VALUES (4, '네 번째 예제 게시물', '게시물 내용', '2024-12-04');
+VALUES (4, '추가', '추가', '2024-12-13');
 
 INSERT INTO board(seq, title, content, regdate)
 VALUES (5, '다섯 번채 에제 게시물', '게시물 내용', '2024-11-30');
@@ -34,7 +34,7 @@ VALUES
 
 SELECT * FROM BOARD;
 
-SELECT * FROM board ORDER BY seq;
+SELECT * FROM board ORDER BY seq desc;
 
 delete from board where seq = 2;
 select * from board order by seq;

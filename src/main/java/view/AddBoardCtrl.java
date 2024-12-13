@@ -39,6 +39,7 @@ public class AddBoardCtrl extends HttpServlet {
             stmt.setString(1, request.getParameter("title"));
             stmt.setString(2, request.getParameter("content"));
 
+
             stmt.executeUpdate();
 
             response.sendRedirect("getBoardList.jsp");

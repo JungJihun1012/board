@@ -49,10 +49,10 @@
             margin: 10px 0 5px;
             color: #555;
         }
-        input[type="text"] {
+        .title, .content {
             width: calc(100% - 20px);
             padding: 10px;
-            border: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
             background-color: #f9f9f9;
@@ -80,9 +80,9 @@
         <h2>게시물</h2>
         <input type="hidden" name="seq" value="<%=board.getSeq()%>"/>
         <label for="title">제목:</label>
-        <input type="text" name="title" value="<%=board.getTitle() %>" readonly="readonly" />
+        <div class="title" name="title"><%=board.getTitle() %></div>
         <label for="content">내용:</label>
-        <input type="text" name="content" value="<%=board.getContent()%>" readonly="readonly"/>
+        <div class="content" name="content"><%=board.getContent()%></div>
         <a href="editBoard.jsp?seq=<%=rs.getInt("seq")%>">수정하기</a>
         <a href="getBoardList.jsp">목록으로</a>
     </div>
